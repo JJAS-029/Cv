@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Cagliostro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kalnia+Glaze:wght@100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+CU:wght@100&family=Playwrite+DK+Uloopet:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Julius+Sans+One&family=Kalnia+Glaze:wght@100..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playwrite+CU:wght@100&family=Playwrite+DK+Uloopet:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*declaracion de variables para todo el proyecto
+aqui se ponene estos valores y en los siguientes solo se manda
+a llamar, si se desea modificar se modifican aqui y cambian 
+en todas las llamadas
+*/
+:root{
+    --color-primario: #040D12;
+    --color-secundario: #f6f6f6;
+    --color-tercero: #5C8374;
+    --color-hover: #183D3D;
+
+    --fuente-merrri: "Merriweather", serif;
+    --fuente-calistro: "Cagliostro", sans-serif, bold;
+    --fuente-edu: "Edu AU VIC WA NT Hand", cursive;
+    --funete-julios: "Julius Sans One", sans-serif;
+
+    --size-content-font: 1.5 rem;
+    --size-content-font1: 1 rem;
+
+    --aline-items: center;
+    --display-flex: flex;
+    --justific-conten: space-between;
+    --justi: justify;
+
+    --gap80: 5 rem;
+    --gap20: 1.25 rem;
+
+    --width515PX: 32.1 rem;
+    --width378px: 23.6 rem;
+
+}
+/*quita los margenes y espacios de toda la pagina*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    /*hará que el contenido contenido 
+    dentro del body se ajuste*/
+    box-sizing: border-box;   
+}
+
+.header{
+    padding: 2% 0% 0% 10%;
+}
+
+.header_menu{
+    display: var(--display-flex); 
+    gap: 80px; 
+}
+
+.header_links{
+    font-family: var(--fuente-merrri);
+    font-size: var(--size-content-font);
+    font-weight: 400;
+    color: var(--color-tercero);
+    text-decoration: none;
+}
+
+.titulo_destacado{
+    color: var(--color-tercero);
+    font-family: var(--fuente-edu);
+}
+
+.presentacion{
+    /*se usa la disposicion de flexbox 
+    para dar formato al contenido*/
+    display: var(--display-flex);
+    align-items: var(--aline-items);
+    padding: 2% 10%;
+    justify-content: var(--justific-conten);
+    gap: 82px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: var(--size-content-font);
+    font-family: var(--funete-julios);
+    text-align: var(--justi);
+}
+.presentacion__contenido{
+    width: 50%;
+    display: var(--display-flex);
+    flex-direction: column;
+    gap: 10px;
+}
+
+.presentacion__contenido__texto{
+    font-size: var(--size-content-font1);
+    font-family: var(--funete-julios);
+    text-align: var(--justi);
+}
+
+.links{
+    color: var(--color-tercero);
+    width: 50%;
+    text-align: var(--aline-items);
+    padding: 21.5px 0px;
+    border-radius: 56px;
+    font-family:var(--fuente-edu);
+    font-size: var(--size-content-font);
+    font-weight: 600;
+    text-decoration: none;
+    justify-content: var(--justific-conten);
+    border: 2px solid var(--color-tercero);
+    display: var(--display-flex);
+    justify-content: var(--aline-items);
+    gap: 5px;    
+}
+
+.links:hover{
+    background-color: var(--color-hover);
+}
+
+.presentacion__enlaces{
+    display: var(--display-flex);   
+    justify-content: var(--justific-conten);
+    flex-direction: column;
+    align-items: var(--aline-items);
+    gap: 12px;
+}
+
+.presentacion_subtitulo{
+    font-family: var(--fuente-calistro);
+    font-weight: 400;
+    color: var(--color-tercero);
+
+}
+
+.foto{
+    width: 40%;
+    border-radius: 56px;
+    justify-content: var(--justific-conten);
+    flex-direction: column;
+    /*height: 40 rem;*/
+}
+
+footer{
+    background-color: var(--color-hover);
+    padding: 8px;
+    text-align: var(--aline-items);
+    color: var(--color-tercero);
+    font-family: var(--fuente-merrri);
+    font-size: var(--size-content-font);
+    font-weight: 300;
+}
+
+.presentacion__contenido__texto a{
+    text-decoration: none;
+    color: var(--color-tercero);
+}
+
+/*se le da un comportamiento especial
+ cuando la pantalla disminuye de ciertos px*/
+@media (max-width: 1200px){
+    .header{
+        padding: 10%;
+    }
+
+    .header_menu{
+        justify-content: center;
+    }
+
+    .presentacion{
+    flex-direction: column-reverse;
+    padding: 5%;
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+}
+
