@@ -176,5 +176,8 @@ footer{
     .presentacion__contenido{
         width: auto;
     }
+    .links:hover{
+        background-color: var(--color-hover);
+    }
 }
 
